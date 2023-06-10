@@ -1,0 +1,58 @@
+.card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    height: 700px;
+    margin: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.card .content h2 {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 6em;
+    color: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+
+.card .content h3 {
+    font-size: 1.8em;
+    color: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+.card .content li {
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: 500;
+}
+
+.card .content a {
+    display: inline-block;
+    width: 200px;
+    margin-top: 15px;
+    padding: 7px 0;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    color: #e6e6e6;
+    background: #0a0a0a;
+    border-radius: 3px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}

@@ -1,4 +1,4 @@
-export function memo(fn) {
+export function cache(fn) {
     const cache = {};
 
     return async (...args) => {

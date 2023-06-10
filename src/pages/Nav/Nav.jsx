@@ -7,7 +7,7 @@ const Nav = () => {
         <>
             <ul className="nav">
                 {navLinks.map((navLink, index) => (
-                    <li key={index}><NavLink to={navLink === 'Home' ? '/' : navLink.toLowerCase()}>{navLink}</NavLink></li>
+                    <li key={index}><NavLink className='menu' to={navLink === 'Home' ? '/' : navLink.toLowerCase()}>{navLink}</NavLink></li>
                 ))}
             </ul>
             <Outlet />

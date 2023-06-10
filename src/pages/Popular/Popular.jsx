@@ -1,12 +1,10 @@
 import { useState, useEffect, useMemo } from "react"
 import { fetchPopularRepos } from "../../plugins/api"
-import { memo } from "../../utils/index"
+import { cache } from "../../utils/index"
 import { useSearchParams } from "react-router-dom"
 import Loader from "../../components/Loader"
-import LanguagesNav from "../../components/LanguagesNav"
-import PopularList from "../../components/PopularList"
-
-
+import LanguagesNav from './LanguagesNav'
+import PopularList from './PopularList'
 
 
 const Popular = () => {
@@ -17,7 +15,7 @@ const Popular = () => {
     const [error, setError] = useState(null)
 
 
-    const fetchPopularReposMemoized = useMemo(() => memo(fetchPopularRepos), [])
+    const fetchPopularReposMemoized = useMemo(() => cache(fetchPopularRepos), [])
 
     useEffect(() => {
         setLoading(true)

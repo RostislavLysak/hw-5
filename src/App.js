@@ -5,6 +5,7 @@ import Popular from './pages/Popular';
 import Battle from './pages/Battle';
 import Error from './pages/Error';
 import Nav from './pages/Nav';
+import Results from './pages/Battle/Results/Results';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,12 @@ const router = createBrowserRouter([
         path: 'battle',
         element: (
           <Battle />
+        )
+      },
+      {
+        path: 'battle/results',
+        element: (
+          <Results />
         )
       },
       {
